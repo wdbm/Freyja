@@ -4,7 +4,7 @@
 %                                                                              %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                              %
-% version: 2015-05-06T2042Z                                                    %
+% version: 2015-05-17T2008Z                                                    %
 %                                                                              %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                              %
@@ -115,18 +115,18 @@
 % measures specifications                                                      %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\imageMeasureJSpecification}{1 cm}
-\newcommand{\imageMeasureKSpecification}{2 cm}
-\newcommand{\imageMeasureLSpecification}{3 cm}
-\newcommand{\imageMeasureMSpecification}{4 cm}
-\newcommand{\imageMeasureNSpecification}{5.5 cm}
-\newcommand{\imageMeasureOSpecification}{5 cm}
-\newcommand{\imageMeasurePSpecification}{6 cm}
-\newcommand{\imageMeasureQSpecification}{7 cm}
-\newcommand{\imageMeasureRSpecification}{8 cm}
-\newcommand{\imageMeasureSSpecification}{9 cm}
-\newcommand{\imageMeasureTSpecification}{10 cm}
-\newcommand{\imageMeasureUSpecification}{11 cm}
+\newcommand{\measureJSpecification}{1 cm}
+\newcommand{\measureKSpecification}{2 cm}
+\newcommand{\measureLSpecification}{3 cm}
+\newcommand{\measureMSpecification}{4 cm}
+\newcommand{\measureNSpecification}{5.5 cm}
+\newcommand{\measureOSpecification}{5 cm}
+\newcommand{\measurePSpecification}{6 cm}
+\newcommand{\measureQSpecification}{7 cm}
+\newcommand{\measureRSpecification}{8 cm}
+\newcommand{\measureSSpecification}{9 cm}
+\newcommand{\measureTSpecification}{10 cm}
+\newcommand{\measureUSpecification}{11 cm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % end of configuration                                                         %
@@ -169,7 +169,7 @@
     \usepackage{pgf}
     \usepackage{tikz}
     \usetikzlibrary{arrows, automata}
-    \usetikzlibrary{shapes,arrows}
+    \usetikzlibrary{shapes, arrows}
     \usetikzlibrary{positioning}
     \usepackage{fancyvrb}
 % mathematics
@@ -201,7 +201,6 @@
 % time
 % ISO date
     \usepackage{babel}
-    \usepackage[iso, inputamerican]{isodate}
 % date formatting
     \usepackage{datetime}
     \newdateformat{timeA}{
@@ -210,11 +209,20 @@
     \newdateformat{timeB}{
         \THEDAY~\monthname[\THEMONTH] \THEYEAR
     }
-    \newtimeformat{timeC}{
+    \newdateformat{timeC}{
+        \monthname[\THEMONTH] \THEYEAR
+    }
+    \newtimeformat{timeD}{%
         \twodigit{\THEHOUR}\twodigit{\THEMINUTE}\twodigit{\THESECOND}
     }
-    \newdateformat{timeD}{
-        \THEYEAR-\twodigit{\THEMONTH}-\twodigit{\THEDAY}T\timeC
+    \newtimeformat{timeE}{%
+        \twodigit{\THEHOUR}\twodigit{\THEMINUTE}
+    }
+    \newdateformat{timeF}{
+        \THEYEAR-\twodigit{\THEMONTH}-\twodigit{\THEDAY}T\timeD
+    }
+    \newdateformat{timeG}{
+        \THEYEAR-\twodigit{\THEMONTH}-\twodigit{\THEDAY}T\timeE
     }
 % tables
     \usepackage{multirow}
@@ -936,7 +944,7 @@
 \frametitle{a single, big image}
 \vspace{-0.24 cm}
 \begin{center}
-\includegraphics[width=\imageMeasureUSpecification]{images/2015-02-09T161202.jpg}\\
+\includegraphics[width=\measureUSpecification]{images/2015-02-09T161202.jpg}\\
 \end{center}
 \end{frame}
 
@@ -947,12 +955,12 @@
 %\animategraphics[
 %    autoplay,
 %    loop,
-%    width=\imageMeasureUSpecification
+%    width=\measureUSpecification
 %]{<frame rate>}{file path and basename}{<first>}{<last>}\\
 \animategraphics[
     autoplay,
     loop,
-    width=\imageMeasureUSpecification
+    width=\measureUSpecification
 ]{30}{images/pool/pool_}{0}{29}\\
 \end{center}
 \end{frame}
@@ -1153,7 +1161,7 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
 \frametitle{${8\textrm{ TeV}}$ vs.~${13\textrm{ TeV}}$: cutflow for ${l+\textrm{jets}}$}
 \begin{center}
 \begin{tabular}{cc}
-\includegraphics[width=\imageMeasureNSpecification]{images_2/2015-04-21T0410Z_cutflow_e_jets.png}&\includegraphics[width=\imageMeasureNSpecification]{images_2/2015-04-21T0410Z_cutflow_mu_jets.png}\\
+\includegraphics[width=\measureNSpecification]{images_2/2015-04-21T0410Z_cutflow_e_jets.png}&\includegraphics[width=\measureNSpecification]{images_2/2015-04-21T0410Z_cutflow_mu_jets.png}\\
 \end{tabular}
 \end{center}
 \end{frame}
@@ -1162,8 +1170,8 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
 \frametitle{${8\textrm{ TeV}}$ vs.~${13\textrm{ TeV}}$: cutflow for dilepton}
 \begin{center}
 \begin{tabular}{ccc}
-\includegraphics[width=\imageMeasureMSpecification]{images_2/2015-04-21T0410Z_cutflow_ee.png}&\includegraphics[width=\imageMeasureMSpecification]{images_2/2015-04-21T0410Z_cutflow_emu.png}&
-\includegraphics[width=\imageMeasureMSpecification]{images_2/2015-04-21T0410Z_cutflow_mumu.png}\\
+\includegraphics[width=\measureMSpecification]{images_2/2015-04-21T0410Z_cutflow_ee.png}&\includegraphics[width=\measureMSpecification]{images_2/2015-04-21T0410Z_cutflow_emu.png}&
+\includegraphics[width=\measureMSpecification]{images_2/2015-04-21T0410Z_cutflow_mumu.png}\\
 \end{tabular}
 \vspace{0.5 cm}\\I3PD+SV1: \url{https://indico.cern.ch/event/387410/contribution/9/material/slides/0.pdf}
 \end{center}
@@ -1173,7 +1181,7 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
 \frametitle{${8\textrm{ TeV}}$ vs.~${13\textrm{ TeV}}$: centrality}
 \begin{center}
 \begin{tabular}{cc}
-\includegraphics[width=\imageMeasureNSpecification]{images_2/2015-04-21T0410Z_comparison_of_Centrality_of_selection_e_jets.png}&\includegraphics[width=\imageMeasureNSpecification]{images_2/2015-04-21T0410Z_comparison_of_Centrality_of_selection_mu_jets.png}\\
+\includegraphics[width=\measureNSpecification]{images_2/2015-04-21T0410Z_comparison_of_Centrality_of_selection_e_jets.png}&\includegraphics[width=\measureNSpecification]{images_2/2015-04-21T0410Z_comparison_of_Centrality_of_selection_mu_jets.png}\\
 \end{tabular}
 \end{center}
 \end{frame}
@@ -1182,7 +1190,7 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
 \frametitle{${8\textrm{ TeV}}$ vs.~${13\textrm{ TeV}}$: JVF}
 \begin{center}
 \begin{tabular}{cc}
-\includegraphics[width=\imageMeasureNSpecification]{images_2/2015-04-21T0410Z_comparison_of_jet_jvf_of_selection_e_jets.png}&\includegraphics[width=\imageMeasureNSpecification]{images_2/2015-04-21T0410Z_comparison_of_jet_jvf_of_selection_mu_jets.png}\\
+\includegraphics[width=\measureNSpecification]{images_2/2015-04-21T0410Z_comparison_of_jet_jvf_of_selection_e_jets.png}&\includegraphics[width=\measureNSpecification]{images_2/2015-04-21T0410Z_comparison_of_jet_jvf_of_selection_mu_jets.png}\\
 \end{tabular}
 \end{center}
 \end{frame}
@@ -1191,8 +1199,8 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
 \frametitle{${8\textrm{ TeV}}$ vs.~${13\textrm{ TeV}}$: subleading jets ${p_{T}}$ of ${e}$ selection}
 \begin{center}
 \begin{tabular}{ccc}
-\includegraphics[width=\imageMeasureLSpecification]{images_2/2015-04-21T0410Z_comparison_of_jet_pt[0]_of_selection_e_jets.png}&\includegraphics[width=\imageMeasureLSpecification]{images_2/2015-04-21T0410Z_comparison_of_jet_pt[1]_of_selection_e_jets.png}&\includegraphics[width=\imageMeasureLSpecification]{images_2/2015-04-21T0410Z_comparison_of_jet_pt[2]_of_selection_e_jets.png}\\
-\includegraphics[width=\imageMeasureLSpecification]{images_2/2015-04-21T0410Z_comparison_of_jet_pt[3]_of_selection_e_jets.png}&\includegraphics[width=\imageMeasureLSpecification]{images_2/2015-04-21T0410Z_comparison_of_jet_pt[4]_of_selection_e_jets.png}&\includegraphics[width=\imageMeasureLSpecification]{images_2/2015-04-21T0410Z_comparison_of_jet_pt[5]_of_selection_e_jets.png}\\
+\includegraphics[width=\measureLSpecification]{images_2/2015-04-21T0410Z_comparison_of_jet_pt[0]_of_selection_e_jets.png}&\includegraphics[width=\measureLSpecification]{images_2/2015-04-21T0410Z_comparison_of_jet_pt[1]_of_selection_e_jets.png}&\includegraphics[width=\measureLSpecification]{images_2/2015-04-21T0410Z_comparison_of_jet_pt[2]_of_selection_e_jets.png}\\
+\includegraphics[width=\measureLSpecification]{images_2/2015-04-21T0410Z_comparison_of_jet_pt[3]_of_selection_e_jets.png}&\includegraphics[width=\measureLSpecification]{images_2/2015-04-21T0410Z_comparison_of_jet_pt[4]_of_selection_e_jets.png}&\includegraphics[width=\measureLSpecification]{images_2/2015-04-21T0410Z_comparison_of_jet_pt[5]_of_selection_e_jets.png}\\
 \end{tabular}
 \end{center}
 \end{frame}
@@ -1202,15 +1210,15 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
 \begin{tabular}{cc}
 40 epochs:&100 epochs:
 \\
-\includegraphics[width=\imageMeasureMSpecification]{images_2/wMwN_atlas_125_all_NN_rEt_rSumPtTrk_rWidth5trPt_40_plots_corrected_Pt_train_ratio.pdf}
+\includegraphics[width=\measureMSpecification]{images_2/wMwN_atlas_125_all_NN_rEt_rSumPtTrk_rWidth5trPt_40_plots_corrected_Pt_train_ratio.pdf}
 &
-\includegraphics[width=\imageMeasureMSpecification]{images_2/wMwN_atlas_125_all_NN_rEt_rSumPtTrk_rWidth5trPt_100_plots_corrected_Pt_train_ratio.pdf}
+\includegraphics[width=\measureMSpecification]{images_2/wMwN_atlas_125_all_NN_rEt_rSumPtTrk_rWidth5trPt_100_plots_corrected_Pt_train_ratio.pdf}
 \\
 145 epochs:&300 epochs:
 \\
-\includegraphics[width=\imageMeasureMSpecification]{images_2/wMwN_atlas_125_all_NN_rEt_rSumPtTrk_rWidth5trPt_145_plots_corrected_Pt_train_ratio.pdf}
+\includegraphics[width=\measureMSpecification]{images_2/wMwN_atlas_125_all_NN_rEt_rSumPtTrk_rWidth5trPt_145_plots_corrected_Pt_train_ratio.pdf}
 &
-\includegraphics[width=\imageMeasureMSpecification]{images_2/wMwN_atlas_125_all_NN_rEt_rSumPtTrk_rWidth5trPt_300_plots_corrected_Pt_train_ratio.pdf}
+\includegraphics[width=\measureMSpecification]{images_2/wMwN_atlas_125_all_NN_rEt_rSumPtTrk_rWidth5trPt_300_plots_corrected_Pt_train_ratio.pdf}
 \\
 \end{tabular}
 \end{table}
