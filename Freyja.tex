@@ -4,7 +4,7 @@
 %                                                                              %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                              %
-% version: 2015-10-05T1203Z                                                    %
+% version: 2015-10-06T1931Z                                                    %
 %                                                                              %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                              %
@@ -96,6 +96,7 @@
     \usepackage{fancyvrb}
 % mathematics
     \usepackage{amsmath}
+    \def\evaluate#1{\the\numexpr#1\relax}
 % floor and ceiling functions
 % examples:
 % - \ceil{x}
@@ -467,30 +468,30 @@
     \ifcase\style
         % case 0
             % UoG
-                \newcommand\logoAFile{{images/logo_UoG_green.png}}
+                \newcommand\logoAFile{{\directoryA/logo_UoG_green.png}}
                 \newcommand{\logoAHeightSpecification}{0.5 cm}
                 \newcommand{\logoBHeightSpecification}{6 cm}
     \or
         % case 1
             % UoG
-                \newcommand\logoAFile{{images/logo_UoG_grey.png}}
+                \newcommand\logoAFile{{\directoryA/logo_UoG_grey.png}}
                 \newcommand{\logoAHeightSpecification}{0.5 cm}
                 \newcommand{\logoBHeightSpecification}{6 cm}
     \or
         % case 2
             \ifcase\institution
                 % case 0 (UoG)
-                    \newcommand\logoAFile{{images/logo_UoG_CERN_blue.png}}
+                    \newcommand\logoAFile{{\directoryA/logo_UoG_CERN_blue.png}}
                     \newcommand{\logoAHeightSpecification}{0.5 cm}
                     \newcommand{\logoBHeightSpecification}{6 cm}
             \or
                 % case 1 (CERN)
-                    \newcommand\logoAFile{{images/LogoOutline-Blue-04.png}}
+                    \newcommand\logoAFile{{\directoryA/LogoOutline-Blue-04.png}}
                     \newcommand{\logoAHeightSpecification}{0.7 cm}
                     \newcommand{\logoBHeightSpecification}{2.5 cm}
             \or
                 % case 2 (ATLAS)
-                    \newcommand\logoAFile{{images/ATLAS_logo_CERN_blue.png}}
+                    \newcommand\logoAFile{{\directoryA/ATLAS_logo_CERN_blue.png}}
                     \newcommand{\logoAHeightSpecification}{0.9 cm}
                     \newcommand{\logoBHeightSpecification}{3.5 cm}
             \fi
@@ -812,45 +813,7 @@
 \usepackage{fancyvrb}
 \fvset{fontsize=\footnotesize}
 \RecustomVerbatimEnvironment{verbatim}{Verbatim}{}
-\definecolor{CERNBlue1}{RGB}{0, 83, 161}
-\tikzset{%
-    image 1/.initial=images_2/AK.png,
-    image 2/.initial=images_2/SB.png,
-    image 3/.initial=images_2/WBM.png,
-    image 4/.initial=images_2/MP.png,
-    image 5/.initial=images_2/SN.png,
-    image 6/.initial=images_2/RETT.png,
-    image 7/.initial=images_2/GA.png,
-    image 8/.initial=images_2/JR.png,
-    path image/.style={path picture={%
-        \edef\imagename{\pgfkeysvalueof{/tikz/image #1}}%
-        \node at (path picture bounding box.center){
-            \includegraphics[height=1cm]{\imagename}
-        };
-    }}
-}
 \renewcommand\familydefault\sfdefault
-\tikzset{%
-    team/.cd,
-    image/.store in=\imagefile, name/.store in=\imagenamed,
-    member 1/.style={image=images_2/AK.png,   name=Andrea\\Knue},
-    member 2/.style={image=images_2/SB.png,   name=Sarah\\Boutle},
-    member 3/.style={image=images_2/WBM.png,  name=Will\\Breaden~Madden},
-    member 4/.style={image=images_2/MP.png,   name=Michele\\Pinamonti},
-    member 5/.style={image=images_2/SN.png,   name=Snezana\\Nektarijevic},
-    member 6/.style={image=images_2/RETT.png, name=Royer~Edson\\Ticse~Torres},
-    member 7/.style={image=images_2/GA.png,   name=Georges\\Aad},
-    member 8/.style={image=images_2/JR.png,   name=Johnny\\Raine},
-    /tikz/pics/team member/.style={code={
-        \tikzset{team/.cd, member #1/.try}%
-        \draw [path picture={%
-            \node at (path picture bounding box.center) 
-                {\includegraphics[height=1cm]{\imagefile}};}, color=CERNBlue1]
-                circle [radius=0.5cm];
-            \node [below, font=\tiny, text width=5em, align=center] 
-                at (0,-.5) {\imagenamed};
-    }}
-}
 \usetikzlibrary{fit, arrows, calc, positioning}
 
 \begin{document}
