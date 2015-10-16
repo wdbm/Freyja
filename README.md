@@ -2,11 +2,24 @@
 
 # introduction
 
+![](images_2/2015-05-12T0817Z.png)
+
 Freyja can be used to create Beamer slides. It demonstrates various presentations of information, including itemised lists with checkmarks, syntax-highlighted code, static images, animated images and embedded data. It provides various configuration settings.
+
+# setup
+
+```Bash
+sudo apt-get -y install pdflatex
+sudo apt-get -y install texlive-full
+sudo apt-get -y install texlive-latex-extra
+sudo apt-get -y install texlive-fonts-recommended
+sudo apt-get -y install texlive-fonts-extra
+sudo apt-get -y install texlive-metapost
+```
 
 # usage
 
-The main code (including preamble etc.) is `Freyja.tex`, the configuration code of style, institution, aspect ratio etc.~is `configuration.tex` and the slides code is `slides.tex`. Slides can be compiled using the script `compile.sh`.
+The main code (including preamble etc.) is `Freyja.tex`, the configuration code of style, institution, aspect ratio etc. is `configuration.tex` and the slides code is `slides.tex`. Slides can be compiled using the script `compile.sh`.
 
 # animated images
 
