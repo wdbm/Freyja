@@ -193,6 +193,42 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
 \end{multicols}
 \end{frame}
 
+\begin{frame}
+\frametitle{positioning by textblock}
+\vspace{-7 cm}
+\small
+\begin{textblock}{8}(0.25, 2.15) % upper left
+\begin{itemize}
+\item suppressed with respect to other Higgs modes
+\item ${H\to b\bar{b}}$ has the largest branching ratio\\(0.577 for ${m_{H}}$ 125~GeV)
+\item irreducible background from ${t\bar{t}b\bar{b}}$
+\item other backgrounds: ${t\bar{t}}$ production in association with light quarks (${u}$, ${d}$, ${s}$) or gluon jets\\(called ${t\bar{t}}$ + light), and ${t\bar{t}+c\bar{c}}$
+%\item large uncertainties on ${t\bar{t}}$ + HF
+\end{itemize}
+\end{textblock}
+\begin{textblock}{8}(8.75, 2.15) % upper right
+\includegraphics[height=4.5 cm]{\directoryImagesB/sumLumiByDayUrgent}
+\end{textblock}
+\begin{textblock}{8}(2.75, 10.5) % lower left
+\begin{centering}
+\begin{tabular}{r|c|c|c|c}
+    ${\sqrt{s}}$ (TeV) & 7 & 8 & 13 & 14 \\
+    \hline
+    ${t\bar{t}H}$ (${m_{H}=125\textrm{ GeV}}$) (pb) & 0.086 & 0.130 & 0.5085 & 0.611 \\
+    ${t\bar{t}}$ (pb) & 177 & 253 & 832 & 950 \\
+    \hline
+    S/${\sqrt{\textrm{B}}}$ & 0.00646 & 0.0082 & 0.0176 & 0.0198 \\
+\end{tabular}
+\end{centering}
+\mbox{}\\
+\mbox{}\\
+\tiny
+7~TeV ${\to}$ 13/14~TeV: ${S/\sqrt{B}}$ changes by factor of ${\simeq}$3
+\end{textblock}
+%\begin{textblock}{8}(8.25, 8.75) % lower right
+%\end{textblock}
+\end{frame}
+
 %\begin{frame}[fragile]
 %\frametitle{global interpreter lock (GIL) in Python}
 %The Python interpreter is not fully thread safe and, so, a GIL is implemented in order to support multithreaded Python programs. Without the GIL, even many simple operations are problematic (e.g. incrementing the reference count of some common object simultaneously in two threads could result in a single increment, rather than the intended two increments).\\
