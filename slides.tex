@@ -496,7 +496,7 @@ number of epochs									&				&	${l\nu bb}$	&	${llbb}$	&	${\nu\nu bb}$	&	all\\
 
 \begin{figure}
 \unitlength=1.00 mm
-\begin{fmffile}{gg}
+\begin{fmffile}{Feynman_diagram_1}
 \begin{fmfchar*}(70,53)
 
 \fmfleftn{i}{2}
@@ -522,6 +522,121 @@ number of epochs									&				&	${l\nu bb}$	&	${llbb}$	&	${\nu\nu bb}$	&	all\\
 \end{fmfchar*}
 \end{fmffile}
 \end{figure}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Feynman diagram with text}
+\begin{columns}
+\begin{column}[t]{.5\textwidth}
+\justifying
+\vspace{-0.5 cm}
+\begin{figure}
+\unitlength=1.00 mm
+\begin{fmffile}{Feynman_diagram_2}
+\begin{fmfchar*}(70,53)
+
+\fmfleftn{i}{2}
+\fmfrightn{o}{4}
+
+\fmf{curly}{i1,v1}
+\fmf{curly}{i2,v2}
+\fmf{fermion}{o1,v1}
+\fmf{fermion, label=\(t\)}{v1,v3}
+\fmf{fermion, label=\(\bar{t}\)}{v3,v2}
+\fmf{fermion}{v2,o4}
+\fmf{dashes, label=\(H^{0}\)}{v3,v4}
+\fmf{fermion}{o2,v4}
+\fmf{fermion}{v4,o3}
+
+\fmflabel{\(g\)}{i1}
+\fmflabel{\(g\)}{i2}
+\fmflabel{\(\bar{t}\)}{o1}
+\fmflabel{\(\bar{b}\)}{o2}
+\fmflabel{\(b\)}{o3}
+\fmflabel{\(t\)}{o4}
+
+\end{fmfchar*}
+\end{fmffile}
+\end{figure}
+\end{column}
+\hfill
+\begin{column}[t]{.5\textwidth}
+\justifying
+Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+\end{column}%
+\end{columns}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Feynman diagrams}
+\begin{columns}
+\begin{column}[t]{.5\textwidth}
+\justifying
+\vspace{-0.5 cm}
+\begin{figure}
+\unitlength=1.00 mm
+\begin{fmffile}{Feynman_diagram_3}
+\begin{fmfchar*}(53,39)
+
+\fmfleftn{i}{2}
+\fmfrightn{o}{4}
+
+\fmf{curly}{i1,v1}
+\fmf{curly}{i2,v2}
+\fmf{fermion}{o1,v1}
+\fmf{fermion, label=\(t\)}{v1,v3}
+\fmf{fermion, label=\(\bar{t}\)}{v3,v2}
+\fmf{fermion}{v2,o4}
+\fmf{dashes, label=\(H^{0}\)}{v3,v4}
+\fmf{fermion}{o2,v4}
+\fmf{fermion}{v4,o3}
+
+\fmflabel{\(g\)}{i1}
+\fmflabel{\(g\)}{i2}
+\fmflabel{\(\bar{t}\)}{o1}
+\fmflabel{\(\bar{b}\)}{o2}
+\fmflabel{\(b\)}{o3}
+\fmflabel{\(t\)}{o4}
+
+\end{fmfchar*}
+\end{fmffile}
+\end{figure}
+\end{column}
+\hfill
+\begin{column}[t]{.5\textwidth}
+\justifying
+\vspace{-0.5 cm}
+\begin{figure}
+\unitlength=1.00 mm
+\begin{fmffile}{Feynman_diagram_4}
+\begin{fmfchar*}(53,39)
+
+\fmfleftn{i}{2}
+\fmfrightn{o}{4}
+
+\fmf{curly}{i1,v1}
+\fmf{curly}{i2,v2}
+\fmf{fermion}{o1,v1}
+\fmf{fermion}{v1,v3}
+\fmf{fermion}{v3,v2}
+\fmf{fermion}{v2,o4}
+
+\fmf{curly, label=\(g\)}{v3,v4}
+\fmf{fermion}{o2,v4}
+\fmf{fermion}{v4,o3}
+
+\fmflabel{\(g\)}{i1}
+\fmflabel{\(g\)}{i2}
+\fmflabel{\(\bar{t}\)}{o1}
+\fmflabel{\(\bar{b}\)}{o2}
+\fmflabel{\(b\)}{o3}
+\fmflabel{\(t\)}{o4}
+
+\end{fmfchar*}
+\end{fmffile}
+\end{figure}
+\end{column}%
+\end{columns}
 \end{frame}
 
 \begin{frame}
