@@ -129,6 +129,32 @@
 \end{frame}
 
 \begin{frame}
+\frametitle{mathematics}
+Jet pull is a variable that can be constructed from particles within a jet cone. The procedure is as follows:
+\begin{itemize}
+\item Select a pair of jets in an event.
+\item Build a vector sum of calorimater cells within each jet.
+\end{itemize}
+\begin{equation}
+\notag
+\vec{p}=\sum_{i}\frac{E_{T}^{i}\left|r_{i}\right|}{E^{\textnormal{jet}}_{T}}
+\end{equation}
+\begin{itemize}
+\item ${\vec{r_{i}}}$: position of jet cell ${i}$ relative to jet centre
+\item ${E_{T}^{i}}$: transverse energy of cell ${i}$
+\item ${E_{T}^{\textnormal{jet}}}$: transverse energy of jet
+\end{itemize}
+Each cell is assigned to the closer jet in ${\left(\eta, \phi\right)}$ space.
+\end{frame}
+
+\begin{frame}
+\frametitle{jet shape and pull}
+Jet shape is influenced by color flow. The pull vectors are different for the singlet and octet cases. For the singlet case the pull vector of one jet points towards the centre of the other jet and for the octet case the pull vector of one jet points somewhat away from the centre of the other jet.
+
+The relative angle of the pull vector with respect to the connection line between the jet centres is a useful measure.
+\end{frame}
+
+\begin{frame}
 \frametitle{emoticons}
 \begin{itemize}
 \item smiley: \smiley
@@ -463,6 +489,39 @@ number of epochs									&				&	${l\nu bb}$	&	${llbb}$	&	${\nu\nu bb}$	&	all\\
 \end{tabular}
 }
 \end{table}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Feynman diagram}
+
+\begin{figure}
+\unitlength=1.00 mm
+\begin{fmffile}{gg}
+\begin{fmfchar*}(70,53)
+
+\fmfleftn{i}{2}
+\fmfrightn{o}{4}
+
+\fmf{curly}{i1,v1}
+\fmf{curly}{i2,v2}
+\fmf{fermion}{o1,v1}
+\fmf{fermion, label=\(t\)}{v1,v3}
+\fmf{fermion, label=\(\bar{t}\)}{v3,v2}
+\fmf{fermion}{v2,o4}
+\fmf{dashes, label=\(H^{0}\)}{v3,v4}
+\fmf{fermion}{o2,v4}
+\fmf{fermion}{v4,o3}
+
+\fmflabel{\(g\)}{i1}
+\fmflabel{\(g\)}{i2}
+\fmflabel{\(\bar{t}\)}{o1}
+\fmflabel{\(\bar{b}\)}{o2}
+\fmflabel{\(b\)}{o3}
+\fmflabel{\(t\)}{o4}
+
+\end{fmfchar*}
+\end{fmffile}
+\end{figure}
 \end{frame}
 
 \begin{frame}
