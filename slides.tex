@@ -147,6 +147,63 @@ Jet pull is a variable that can be constructed from particles within a jet cone.
 Each cell is assigned to the closer jet in ${\left(\eta, \phi\right)}$ space.
 \end{frame}
 
+\begin{frame}[fragile]
+\frametitle{code: Python}
+\begin{python}
+import multiprocessing
+
+def function(x):
+    return x * x
+
+if __name__ == '__main__':
+    pool = multiprocessing.Pool(processes = 4)
+    result = pool.apply_async(function, [10])
+    print(result.get(timeout = 1))
+    print(pool.map(function, range(10)))
+\end{python}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{code: C++}
+\begin{cpp}
+#include <iostream>
+#include <thread>
+
+void say_hello();
+
+int main(int argc, char** argv){
+
+    std::thread my_first_thread(say_hello);
+    my_first_thread.join();
+
+    return 0;
+}
+
+void say_hello(){
+    std::cout << "hello from a thread" << std::endl;
+}
+\end{cpp}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{code: \LaTeX}
+\begin{latex}
+\documentclass{article}
+
+\title{Special Paper}
+
+\author{Simon Jester}
+
+\begin{document}
+
+\maketitle
+
+hello world
+
+\end{document}
+\end{latex}
+\end{frame}
+
 \begin{frame}
 \frametitle{emoticons}
 \begin{itemize}
