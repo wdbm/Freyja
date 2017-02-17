@@ -6,6 +6,26 @@
 
 Freyja can be used to create Beamer slides. It demonstrates various presentations of information, including itemised lists with checkmarks, syntax-highlighted code, static images, animated images and embedded data. It provides various configuration settings.
 
+# features
+
+- title page logo
+- animated images (compatible with Adobe Reader)
+- video (compatible with Okular)
+- lists -- itemize, enumerate, description, description with checkmarks
+- hyperlinks
+- mathematics -- inline and equation
+- code syntax highlighted
+- emoticons
+- blocks
+- columns -- columns environment, multicols environment
+- positioning by textblock
+- multiple images -- tabular
+- tables
+- Feynman diagrams
+- embedded data file, embedded sound file
+- images in circle arrangement (TikZ)
+- flow chart (TikZ)
+
 # setup
 
 ```Bash
