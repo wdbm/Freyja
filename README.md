@@ -1,5 +1,11 @@
 # Freyja
 
+"In the slight chance that I have not explained it perfectly I can take your questions now."
+
+"..."
+
+"Perfect it is then."
+
 # introduction
 
 ![](images_2/2015-05-12T0817Z.png)
